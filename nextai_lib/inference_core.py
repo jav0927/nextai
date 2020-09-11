@@ -4,7 +4,7 @@ __all__ = ['device', 'ctrhw2tlbr', 'tlbr2cthw', 'activ_decode', 'activ_encode', 
            'graft_zerorows_to_tensor', 'flip_on_y_axis', 'flip_on_x_axis', 'rotate_90_plus', 'rotate_90_minus']
 
 # Cell
-#from fastai.imports import *
+from fastai.imports import *
 from torch import tensor, Tensor
 import torch
 
