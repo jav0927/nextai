@@ -73,17 +73,17 @@ def activ_decode(p_boxes:Tensor, anchors:Tensor):
                       dim:    batch x tems in batch x 4)
                       Format: tlbr - top left xy, bottom right xy'''
 
-  sigma_xy, sigma_hw = torch.sqrt(torch.tensor([0.1])).to(device), torch.sqrt(torch.tensor([0.2])).to(device)       # Variances for center and hw coordinates
+  sigma_xy, sigma_hw = torch.sqrt(torch.tensor([0.1])), torch.sqrt(torch.tensor([0.2]))             # Variances for center and hw coordinates
 
   pb = torch.tanh( p_boxes)                 # Set activations into [-1,1] basis (as used in Fastai)
-
+  print(pb.is_cuda)
   ctrwh = tlbr2cthw(pb, ctrhw=False)        # Transform box activations from xyxy format to CxCyWH format.
 
   # Calculate offset centers. The sequence is Xp, followed by Yp
-  offset_centers = ctrwh[:,:,[0,1]] * sigma_xy * anchors[:,[2,3]]  + anchors[:,[0,1]]
+  offset_centers = ctrwh[:,:,[0,1]].to(device) * sigma_xy.to(device) * anchors[:,[2,3]].to(device) + anchors[:,[0,1]].to(device)
 
   # Calculate offset sizes. The sequence is Wp, followed by Hp
-  offset_sizes =  torch.exp(ctrwh[:,:,[2,3]] *sigma_hw.to(device)) *anchors[:,[2,3]]
+  offset_sizes =  torch.exp(ctrwh[:,:,[2,3]].to(device) *sigma_hw.to(device)) *anchors[:,[2,3]].to(device)
 
   # Return format to CxCyHW and then return, switching back to X1Y1X2Y2 format.
   return torch.clamp(ctrhw2tlbr(torch.cat([offset_centers, offset_sizes], 2), set_if_input_is_CxCyWH=True).view(*p_boxes.shape), min=-1, max=+1)
