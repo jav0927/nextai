@@ -48,83 +48,6 @@ nb_path: "01_anchor_boxes.ipynb"
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Collecting git+https://github.com/pete88b/nbdev_colab_helper.git
-  Cloning https://github.com/pete88b/nbdev_colab_helper.git to /tmp/pip-req-build-enqtdhbo
-  Running command git clone -q https://github.com/pete88b/nbdev_colab_helper.git /tmp/pip-req-build-enqtdhbo
-Building wheels for collected packages: nbdev-colab-helper
-  Building wheel for nbdev-colab-helper (setup.py) ... done
-  Created wheel for nbdev-colab-helper: filename=nbdev_colab_helper-0.0.1-cp36-none-any.whl size=9648 sha256=e8d6216bd489f7da104f18b6728c0421155aa19b99ff3b0ffb96aa0270132c21
-  Stored in directory: /tmp/pip-ephem-wheel-cache-7dg1h_xr/wheels/11/52/f4/a49fbdda142e8992bb1695aa9eb30f499294a14cfb4b753fbe
-Successfully built nbdev-colab-helper
-Installing collected packages: nbdev-colab-helper
-Successfully installed nbdev-colab-helper-0.0.1
-Connecting to google drive
-Mounted at /content/drive
-/content/drive/My Drive/Colab Notebooks/github/nextai
-pip install git+https://github.com/fastai/nbdev.git
-   Collecting git+https://github.com/fastai/nbdev.git
-  Cloning https://github.com/fastai/nbdev.git to /tmp/pip-req-build-0c9zsws3
-Requirement already satisfied: pip in /usr/local/lib/python3.6/dist-packages (from nbdev==1.0.18) (19.3.1)
-Requirement already satisfied: packaging in /usr/local/lib/python3.6/dist-packages (from nbdev==1.0.18) (20.4)
-Collecting fastcore&gt;=1.0.5
-  Downloading https://files.pythonhosted.org/packages/ca/f6/fe20bfa7d818104f940da81a60e7532090fd87c31f90d4c3b8ae2823d28a/fastcore-1.0.9-py3-none-any.whl
-Requirement already satisfied: nbformat&gt;=4.4.0 in /usr/local/lib/python3.6/dist-packages (from nbdev==1.0.18) (5.0.7)
-Requirement already satisfied: nbconvert&lt;6 in /usr/local/lib/python3.6/dist-packages (from nbdev==1.0.18) (5.6.1)
-Requirement already satisfied: pyyaml in /usr/local/lib/python3.6/dist-packages (from nbdev==1.0.18) (3.13)
-Collecting fastscript&gt;=1.0.0
-  Downloading https://files.pythonhosted.org/packages/60/e4/7790e3ca100841566fdc1ccee413b9a9d40629d1858d86b1b9ffbc4fa75a/fastscript-1.0.0-py3-none-any.whl
-Requirement already satisfied: jupyter_client in /usr/local/lib/python3.6/dist-packages (from nbdev==1.0.18) (5.3.5)
-Requirement already satisfied: ipykernel in /usr/local/lib/python3.6/dist-packages (from nbdev==1.0.18) (4.10.1)
-Requirement already satisfied: pyparsing&gt;=2.0.2 in /usr/local/lib/python3.6/dist-packages (from packaging-&gt;nbdev==1.0.18) (2.4.7)
-Requirement already satisfied: six in /usr/local/lib/python3.6/dist-packages (from packaging-&gt;nbdev==1.0.18) (1.15.0)
-Requirement already satisfied: ipython-genutils in /usr/local/lib/python3.6/dist-packages (from nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (0.2.0)
-Requirement already satisfied: jupyter-core in /usr/local/lib/python3.6/dist-packages (from nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (4.6.3)
-Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in /usr/local/lib/python3.6/dist-packages (from nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (2.6.0)
-Requirement already satisfied: traitlets&gt;=4.1 in /usr/local/lib/python3.6/dist-packages (from nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (4.3.3)
-Requirement already satisfied: jinja2&gt;=2.4 in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (2.11.2)
-Requirement already satisfied: testpath in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (0.4.4)
-Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (0.8.4)
-Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (0.3)
-Requirement already satisfied: bleach in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (3.1.5)
-Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (1.4.2)
-Requirement already satisfied: defusedxml in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (0.6.0)
-Requirement already satisfied: pygments in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (2.1.3)
-Requirement already satisfied: pyzmq&gt;=13 in /usr/local/lib/python3.6/dist-packages (from jupyter_client-&gt;nbdev==1.0.18) (19.0.2)
-Requirement already satisfied: tornado&gt;=4.1 in /usr/local/lib/python3.6/dist-packages (from jupyter_client-&gt;nbdev==1.0.18) (5.1.1)
-Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.6/dist-packages (from jupyter_client-&gt;nbdev==1.0.18) (2.8.1)
-Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.6/dist-packages (from ipykernel-&gt;nbdev==1.0.18) (5.5.0)
-Requirement already satisfied: decorator in /usr/local/lib/python3.6/dist-packages (from traitlets&gt;=4.1-&gt;nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (4.4.2)
-Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/local/lib/python3.6/dist-packages (from jinja2&gt;=2.4-&gt;nbconvert&lt;6-&gt;nbdev==1.0.18) (1.1.1)
-Requirement already satisfied: webencodings in /usr/local/lib/python3.6/dist-packages (from bleach-&gt;nbconvert&lt;6-&gt;nbdev==1.0.18) (0.5.1)
-Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (49.6.0)
-Requirement already satisfied: pickleshare in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (0.7.5)
-Requirement already satisfied: prompt-toolkit&lt;2.0.0,&gt;=1.0.4 in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (1.0.18)
-Requirement already satisfied: simplegeneric&gt;0.8 in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (0.8.1)
-Requirement already satisfied: pexpect; sys_platform != &#34;win32&#34; in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (4.8.0)
-Requirement already satisfied: wcwidth in /usr/local/lib/python3.6/dist-packages (from prompt-toolkit&lt;2.0.0,&gt;=1.0.4-&gt;ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (0.2.5)
-Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.6/dist-packages (from pexpect; sys_platform != &#34;win32&#34;-&gt;ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (0.6.0)
-Building wheels for collected packages: nbdev
-  Building wheel for nbdev (setup.py): started
-  Building wheel for nbdev (setup.py): finished with status &#39;done&#39;
-  Created wheel for nbdev: filename=nbdev-1.0.18-cp36-none-any.whl size=55139 sha256=5c893bdc19b3f8de5b6ba5313f678acc9a99478ad3bf77834e242fd803f006b4
-  Stored in directory: /tmp/pip-ephem-wheel-cache-qvzi730j/wheels/92/fb/71/9ef9a3edcda4b045bd45abb28de841f18ab36606a7ff7473d4
-Successfully built nbdev
-Installing collected packages: fastcore, fastscript, nbdev
-Successfully installed fastcore-1.0.9 fastscript-1.0.0 nbdev-1.0.18 
-/content/drive/My Drive/Colab Notebooks/github/nextai
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -143,7 +66,7 @@ Preset Parameters:</p>
 <li>anc_grids  -  Preset anchor sizes: 4 x 4, 2 x 2, 1 x 1</li>
 <li>anc_zooms  -  Preset anchor zooming coefficients: (0.75, 1, 1.3)</li>
 <li>anc_ratios -  Preset anchor size ratios:  (1., 1.), (1., 0.5), (0.5, 1.)
-<br><br></li>
+<br></li>
 </ul>
 <p>Outputs:<br></p>
 <ul>
@@ -157,6 +80,39 @@ Preset Parameters:</p>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="get_anchors" class="doc_header"><code>get_anchors</code><a href="https://github.com/jav0927/nextai_lib/tree/master/nextai_lib/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_anchors</code>()</p>
+</blockquote>
+<p>This method creates anchor boxes of various sizes on top of a grid with coordinates of size (-1,-1) top-left and (1,1) bottom-right.</p>
+<p>Preset Parameters:
+anc_grids - Preset anchor sizes: 4 x 4, 2 x 2, 1 x 1
+anc_zooms - Preset anchor zooming coefficients: (0.75, 1, 1.3)
+anc_ratios - Preset anchor size ratios: (1., 1.), (1., 0.5), (0.5, 1.)</p>
+<p>Outputs:
+k - Number of default boxes associated to a give image. This parameter is used by the SSD model
+anchors - Array of anchor boxes to be used in training and inference.
+          Tensor of dimension (m, 4), where m = k x 21</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
 
 </div>
     {% endraw %}
@@ -179,7 +135,7 @@ Preset Parameters:</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="show_anchors" class="doc_header"><code>show_anchors</code><a href="https://github.com/jav0927/nextai_lib/tree/master/nextai_lib/core.py#L56" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>show_anchors</code>(<strong><code>ancs</code></strong>, <strong><code>size</code></strong>, <strong><code>y_first</code></strong>=<em><code>True</code></em>)</p>
+<h4 id="show_anchors" class="doc_header"><code>show_anchors</code><a href="https://github.com/jav0927/nextai_lib/tree/master/nextai_lib/core.py#L71" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>show_anchors</code>(<strong><code>ancs</code></strong>, <strong><code>size</code></strong>, <strong><code>y_first</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
 
 </div>
