@@ -2,6 +2,7 @@
   "nextai_lib": {
     "Overview": "/",
     "module name here": "core.html",
-    "inference_core": "inference_core.html"
+    "inference_core": "inference_core.html",
+    "01_anchor_boxes": "anchor_boxes.html"
   }
 }

@@ -15,6 +15,9 @@ entries:
     - output: web,pdf
       title: inference_core
       url: inference_core.html
+    - output: web,pdf
+      title: 01_anchor_boxes
+      url: anchor_boxes.html
     output: web
     title: nextai_lib
   output: web
