@@ -1,5 +1,5 @@
-# NEXTAI
-> Projects on artificial intelligence, with enphasis on object regnition and other vision-related areas
+# Nextai
+> Object recognition research notebooks and investigations on other vision related areas.
 
 
 This file will become your README and also the index of your documentation.
@@ -12,7 +12,7 @@ This file will become your README and also the index of your documentation.
 
 Fill me in please! Don't forget code examples:
 
-```
+```python
 1+1
 ```
 
