@@ -16,8 +16,8 @@ index = {"device": "00_inference_core.ipynb",
          "get_anchors": "01_anchor_boxes.ipynb",
          "show_anchors": "01_anchor_boxes.ipynb"}
 
-modules = ["inference_core.py",
-           "core.py"]
+modules = ["00_inference_core.py",
+           "01_anchor_boxes.py"]
 
 doc_url = "https://jav0927.github.io/nextai_lib/"
 
