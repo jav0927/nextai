@@ -163,4 +163,4 @@ def rotate_90_plus(bb:Tensor):
 def rotate_90_minus(bb:Tensor):
   ''' Rotate bounding box(s) by 90 degrees counterclockwise
       Input:   bboxes   Bounding boox tensor in xyxy format'''
-  return bb[...,[1,2,3,0]]*torch.tensor([1.,-1.,1.,-1.]).to(device)
+  return bb[...,[1,2,3,0]]*torch.tensor([1.,-1.,1.,-1.])
