@@ -13,8 +13,8 @@ entries:
       title: module name here
       url: core.html
     - output: web,pdf
-      title: inference_core
-      url: inference_core.html
+      title: vision_core
+      url: vision_core.html
     - output: web,pdf
       title: anchor_boxes
       url: anchor_boxes.html

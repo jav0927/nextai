@@ -2,21 +2,21 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"device": "00_inference_core.ipynb",
-         "ctrhw2tlbr": "00_inference_core.ipynb",
-         "tlbr2cthw": "00_inference_core.ipynb",
-         "activ_decode": "00_inference_core.ipynb",
-         "activ_encode": "00_inference_core.ipynb",
-         "strip_zero_rows": "00_inference_core.ipynb",
-         "graft_zerorows_to_tensor": "00_inference_core.ipynb",
-         "flip_on_y_axis": "00_inference_core.ipynb",
-         "flip_on_x_axis": "00_inference_core.ipynb",
-         "rotate_90_plus": "00_inference_core.ipynb",
-         "rotate_90_minus": "00_inference_core.ipynb",
+index = {"device": "00_vision_core.ipynb",
+         "ctrhw2tlbr": "00_vision_core.ipynb",
+         "tlbr2cthw": "00_vision_core.ipynb",
+         "activ_decode": "00_vision_core.ipynb",
+         "activ_encode": "00_vision_core.ipynb",
+         "strip_zero_rows": "00_vision_core.ipynb",
+         "graft_zerorows_to_tensor": "00_vision_core.ipynb",
+         "flip_on_y_axis": "00_vision_core.ipynb",
+         "flip_on_x_axis": "00_vision_core.ipynb",
+         "rotate_90_plus": "00_vision_core.ipynb",
+         "rotate_90_minus": "00_vision_core.ipynb",
          "get_anchors": "01_anchor_boxes.ipynb",
          "show_anchors": "01_anchor_boxes.ipynb"}
 
-modules = ["inference_core.py",
+modules = ["vision_core.py",
            "anchor_boxes.py"]
 
 doc_url = "https://jav0927.github.io/nextai_lib/"
