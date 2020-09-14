@@ -21,6 +21,6 @@ modules = ["inference_core.py",
 
 doc_url = "https://jav0927.github.io/nextai_lib/"
 
-git_url = "https://github.com/jav0927/nextai_lib/tree/master/"
+git_url = "https://github.com/jav0927/nextai_lib/tree/main/"
 
 def custom_doc_links(name): return None
