@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: nextai-lib
+Version: 0.0.1
+Summary: Projects on artificial intelligence, with enphasis on object regnition and other vision-related areas
+Home-page: https://github.com/jav0927/nextai_lib/tree/master/
+Author: ose Adolfo Villalobos
+Author-email: wolves.lair@icloud.com
+License: Apache Software License 2.0
+Description: # Nextai
+        > Object recognition research notebooks and investigations on other vision related areas.
+        
+        
+        This file will become your README and also the index of your documentation.
+        
+        ## Install
+        
+        `pip install your_project_name`
+        
+        ## How to use
+        
+        Fill me in please! Don't forget code examples:
+        
+        ```python
+        1+1
+        ```
+        
+        
+        
+        
+            2
+        
+        
+        
+Keywords: AI,artificial intelligence,vision,cnn,neural networks
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

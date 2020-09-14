@@ -1,6 +1,6 @@
 ---
 
-title: 01_anchor_boxes
+title: anchor_boxes
 
 
 keywords: fastai
@@ -39,7 +39,7 @@ nb_path: "01_anchor_boxes.ipynb"
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">IN_COLAB</span> <span class="o">=</span> <span class="s1">&#39;google.colab&#39;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">get_ipython</span><span class="p">())</span>
 <span class="k">if</span> <span class="n">IN_COLAB</span><span class="p">:</span>
   <span class="o">!</span>pip install git+https://github.com/pete88b/nbdev_colab_helper.git
-  <span class="kn">from</span> <span class="nn">nbdev_colab_helper.core</span> <span class="k">import</span> <span class="o">*</span>
+  <span class="kn">from</span> <span class="nn">nbdev_colab_helper.core</span> <span class="kn">import</span> <span class="o">*</span>
   <span class="n">project_name</span> <span class="o">=</span> <span class="s1">&#39;nextai&#39;</span>
   <span class="n">init_notebook</span><span class="p">(</span><span class="n">project_name</span><span class="p">)</span>
 </pre></div>
@@ -95,7 +95,7 @@ Preset Parameters:</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_anchors" class="doc_header"><code>get_anchors</code><a href="https://github.com/jav0927/nextai_lib/tree/master/nextai_lib/core.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_anchors</code>()</p>
+<h4 id="get_anchors" class="doc_header"><code>get_anchors</code><a href="https://github.com/jav0927/nextai_lib/tree/master/nextai_lib/anchor_boxes.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_anchors</code>()</p>
 </blockquote>
 <p>This method creates anchor boxes of various sizes on top of a grid with coordinates of size (-1,-1) top-left and (1,1) bottom-right.</p>
 <p>Preset Parameters:
@@ -135,7 +135,7 @@ anchors - Array of anchor boxes to be used in training and inference.
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="show_anchors" class="doc_header"><code>show_anchors</code><a href="https://github.com/jav0927/nextai_lib/tree/master/nextai_lib/core.py#L71" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>show_anchors</code>(<strong><code>ancs</code></strong>, <strong><code>size</code></strong>, <strong><code>y_first</code></strong>=<em><code>True</code></em>)</p>
+<h4 id="show_anchors" class="doc_header"><code>show_anchors</code><a href="https://github.com/jav0927/nextai_lib/tree/master/nextai_lib/anchor_boxes.py#L71" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>show_anchors</code>(<strong><code>ancs</code></strong>, <strong><code>size</code></strong>, <strong><code>y_first</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
 
 </div>

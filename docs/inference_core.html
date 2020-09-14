@@ -39,7 +39,7 @@ nb_path: "00_inference_core.ipynb"
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">IN_COLAB</span> <span class="o">=</span> <span class="s1">&#39;google.colab&#39;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">get_ipython</span><span class="p">())</span>
 <span class="k">if</span> <span class="n">IN_COLAB</span><span class="p">:</span>
   <span class="o">!</span>pip install git+https://github.com/pete88b/nbdev_colab_helper.git
-  <span class="kn">from</span> <span class="nn">nbdev_colab_helper.core</span> <span class="k">import</span> <span class="o">*</span>
+  <span class="kn">from</span> <span class="nn">nbdev_colab_helper.core</span> <span class="kn">import</span> <span class="o">*</span>
   <span class="n">project_name</span> <span class="o">=</span> <span class="s1">&#39;nextai&#39;</span>
   <span class="n">init_notebook</span><span class="p">(</span><span class="n">project_name</span><span class="p">)</span>
 </pre></div>
@@ -55,12 +55,12 @@ nb_path: "00_inference_core.ipynb"
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Collecting git+https://github.com/pete88b/nbdev_colab_helper.git
-  Cloning https://github.com/pete88b/nbdev_colab_helper.git to /tmp/pip-req-build-ou8zza6m
-  Running command git clone -q https://github.com/pete88b/nbdev_colab_helper.git /tmp/pip-req-build-ou8zza6m
+  Cloning https://github.com/pete88b/nbdev_colab_helper.git to /tmp/pip-req-build-um5hc6ih
+  Running command git clone -q https://github.com/pete88b/nbdev_colab_helper.git /tmp/pip-req-build-um5hc6ih
 Building wheels for collected packages: nbdev-colab-helper
   Building wheel for nbdev-colab-helper (setup.py) ... done
-  Created wheel for nbdev-colab-helper: filename=nbdev_colab_helper-0.0.1-cp36-none-any.whl size=9648 sha256=4b033bbeb979740e829237ae5c0ce545f1c524de138c676532b9ef886a555ba7
-  Stored in directory: /tmp/pip-ephem-wheel-cache-szn00uw5/wheels/11/52/f4/a49fbdda142e8992bb1695aa9eb30f499294a14cfb4b753fbe
+  Created wheel for nbdev-colab-helper: filename=nbdev_colab_helper-0.0.1-cp36-none-any.whl size=9648 sha256=6ec9a519e4973c7c4798235dc8e9d01aea40956911479e950099fd3bd22ba290
+  Stored in directory: /tmp/pip-ephem-wheel-cache-e6yu09pg/wheels/11/52/f4/a49fbdda142e8992bb1695aa9eb30f499294a14cfb4b753fbe
 Successfully built nbdev-colab-helper
 Installing collected packages: nbdev-colab-helper
 Successfully installed nbdev-colab-helper-0.0.1
@@ -69,7 +69,7 @@ Mounted at /content/drive
 /content/drive/My Drive/Colab Notebooks/github/nextai
 pip install git+https://github.com/fastai/nbdev.git
    Collecting git+https://github.com/fastai/nbdev.git
-  Cloning https://github.com/fastai/nbdev.git to /tmp/pip-req-build-nfr5vkun
+  Cloning https://github.com/fastai/nbdev.git to /tmp/pip-req-build-hz82al8k
 Requirement already satisfied: pip in /usr/local/lib/python3.6/dist-packages (from nbdev==1.0.18) (19.3.1)
 Requirement already satisfied: packaging in /usr/local/lib/python3.6/dist-packages (from nbdev==1.0.18) (20.4)
 Collecting fastcore&gt;=1.0.5
@@ -83,37 +83,37 @@ Requirement already satisfied: jupyter_client in /usr/local/lib/python3.6/dist-p
 Requirement already satisfied: ipykernel in /usr/local/lib/python3.6/dist-packages (from nbdev==1.0.18) (4.10.1)
 Requirement already satisfied: six in /usr/local/lib/python3.6/dist-packages (from packaging-&gt;nbdev==1.0.18) (1.15.0)
 Requirement already satisfied: pyparsing&gt;=2.0.2 in /usr/local/lib/python3.6/dist-packages (from packaging-&gt;nbdev==1.0.18) (2.4.7)
-Requirement already satisfied: ipython-genutils in /usr/local/lib/python3.6/dist-packages (from nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (0.2.0)
-Requirement already satisfied: traitlets&gt;=4.1 in /usr/local/lib/python3.6/dist-packages (from nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (4.3.3)
 Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in /usr/local/lib/python3.6/dist-packages (from nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (2.6.0)
+Requirement already satisfied: ipython-genutils in /usr/local/lib/python3.6/dist-packages (from nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (0.2.0)
 Requirement already satisfied: jupyter-core in /usr/local/lib/python3.6/dist-packages (from nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (4.6.3)
-Requirement already satisfied: bleach in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (3.1.5)
-Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (0.3)
-Requirement already satisfied: jinja2&gt;=2.4 in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (2.11.2)
+Requirement already satisfied: traitlets&gt;=4.1 in /usr/local/lib/python3.6/dist-packages (from nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (4.3.3)
+Requirement already satisfied: pygments in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (2.6.1)
 Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (1.4.2)
-Requirement already satisfied: defusedxml in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (0.6.0)
+Requirement already satisfied: jinja2&gt;=2.4 in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (2.11.2)
 Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (0.8.4)
-Requirement already satisfied: pygments in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (2.1.3)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (0.6.0)
+Requirement already satisfied: bleach in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (3.1.5)
 Requirement already satisfied: testpath in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (0.4.4)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.6/dist-packages (from nbconvert&lt;6-&gt;nbdev==1.0.18) (0.3)
 Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.6/dist-packages (from jupyter_client-&gt;nbdev==1.0.18) (2.8.1)
 Requirement already satisfied: tornado&gt;=4.1 in /usr/local/lib/python3.6/dist-packages (from jupyter_client-&gt;nbdev==1.0.18) (5.1.1)
 Requirement already satisfied: pyzmq&gt;=13 in /usr/local/lib/python3.6/dist-packages (from jupyter_client-&gt;nbdev==1.0.18) (19.0.2)
 Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.6/dist-packages (from ipykernel-&gt;nbdev==1.0.18) (5.5.0)
 Requirement already satisfied: decorator in /usr/local/lib/python3.6/dist-packages (from traitlets&gt;=4.1-&gt;nbformat&gt;=4.4.0-&gt;nbdev==1.0.18) (4.4.2)
-Requirement already satisfied: webencodings in /usr/local/lib/python3.6/dist-packages (from bleach-&gt;nbconvert&lt;6-&gt;nbdev==1.0.18) (0.5.1)
 Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/local/lib/python3.6/dist-packages (from jinja2&gt;=2.4-&gt;nbconvert&lt;6-&gt;nbdev==1.0.18) (1.1.1)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.6/dist-packages (from bleach-&gt;nbconvert&lt;6-&gt;nbdev==1.0.18) (0.5.1)
 Requirement already satisfied: pickleshare in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (0.7.5)
-Requirement already satisfied: pexpect; sys_platform != &#34;win32&#34; in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (4.8.0)
-Requirement already satisfied: simplegeneric&gt;0.8 in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (0.8.1)
-Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (49.6.0)
+Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (50.3.0)
 Requirement already satisfied: prompt-toolkit&lt;2.0.0,&gt;=1.0.4 in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (1.0.18)
-Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.6/dist-packages (from pexpect; sys_platform != &#34;win32&#34;-&gt;ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (0.6.0)
+Requirement already satisfied: simplegeneric&gt;0.8 in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (0.8.1)
+Requirement already satisfied: pexpect; sys_platform != &#34;win32&#34; in /usr/local/lib/python3.6/dist-packages (from ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (4.8.0)
 Requirement already satisfied: wcwidth in /usr/local/lib/python3.6/dist-packages (from prompt-toolkit&lt;2.0.0,&gt;=1.0.4-&gt;ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (0.2.5)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.6/dist-packages (from pexpect; sys_platform != &#34;win32&#34;-&gt;ipython&gt;=4.0.0-&gt;ipykernel-&gt;nbdev==1.0.18) (0.6.0)
 Building wheels for collected packages: nbdev
   Building wheel for nbdev (setup.py): started
   Building wheel for nbdev (setup.py): finished with status &#39;done&#39;
-  Created wheel for nbdev: filename=nbdev-1.0.18-cp36-none-any.whl size=55139 sha256=beba7a5a521fe62d67b58a5865fd8cd77c1f1f1be20901038aabf83a7d187572
-  Stored in directory: /tmp/pip-ephem-wheel-cache-w_qqpqam/wheels/92/fb/71/9ef9a3edcda4b045bd45abb28de841f18ab36606a7ff7473d4
+  Created wheel for nbdev: filename=nbdev-1.0.18-cp36-none-any.whl size=55139 sha256=550eea2f300deae2f4b0b089eaa6e3c607615d28151d529cfb12abff784f3304
+  Stored in directory: /tmp/pip-ephem-wheel-cache-j9kxn3hr/wheels/92/fb/71/9ef9a3edcda4b045bd45abb28de841f18ab36606a7ff7473d4
 Successfully built nbdev
 Installing collected packages: fastcore, fastscript, nbdev
 Successfully installed fastcore-1.0.9 fastscript-1.0.0 nbdev-1.0.18 
@@ -573,7 +573,7 @@ Input:   bboxes   Bounding boox tensor in xyxy format</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nbdev.cli</span> <span class="k">import</span> <span class="n">nbdev_build_docs</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">nbdev.cli</span> <span class="kn">import</span> <span class="n">nbdev_build_docs</span>
 <span class="n">nbdev_build_docs</span><span class="p">()</span>
 </pre></div>
 

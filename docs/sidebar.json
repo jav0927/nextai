@@ -3,6 +3,6 @@
     "Overview": "/",
     "module name here": "core.html",
     "inference_core": "inference_core.html",
-    "01_anchor_boxes": "anchor_boxes.html"
+    "anchor_boxes": "anchor_boxes.html"
   }
 }
