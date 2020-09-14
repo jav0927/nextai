@@ -76,7 +76,7 @@ def activ_decode(p_boxes:Tensor, anchors:Tensor):
   sigma_xy, sigma_hw = torch.sqrt(torch.tensor([0.1])), torch.sqrt(torch.tensor([0.2]))             # Variances for center and hw coordinates
 
   pb = torch.tanh( p_boxes)                 # Set activations into [-1,1] basis (as used in Fastai)
-  print(pb.is_cuda)
+
   ctrwh = tlbr2cthw(pb, ctrhw=False)        # Transform box activations from xyxy format to CxCyWH format.
 
   # Calculate offset centers. The sequence is Xp, followed by Yp
@@ -144,20 +144,20 @@ def graft_zerorows_to_tensor(bboxes:Tensor, zboxes:Tensor):
 def flip_on_y_axis(bboxes:Tensor):
     ''' Flip a bounding box along the y axis
         Input:   bboxes   Bounding box tensor '''
-    return bboxes[...,[2,1,0,3]]*torch.tensor([-1.,1.,-1.,1.]).to(device)
+    return bboxes[...,[2,1,0,3]]*torch.tensor([-1.,1.,-1.,1.])
 
 # Cell
 # Flip a bounding box along the x axis
 def flip_on_x_axis(bboxes:Tensor):
     ''' Flip a bounding box along the x axis
         Input:   bboxes   Bounding boox tensor '''
-    return bboxes[...,[0,3,2,1]]*torch.tensor([1.,-1.,1.,-1.]).to(device)
+    return bboxes[...,[0,3,2,1]]*torch.tensor([1.,-1.,1.,-1.])
 
 # Cell
 def rotate_90_plus(bb:Tensor):
   ''' Rotate bounding box(s) by 90 degrees clockwise
       Input:   bboxes   Bounding boox tensor '''
-  return bb[...,[3,0,1,2]]*torch.tensor([-1.,1.,-1.,1.]).to(device)
+  return bb[...,[3,0,1,2]]*torch.tensor([-1.,1.,-1.,1.])
 
 # Cell
 def rotate_90_minus(bb:Tensor):
