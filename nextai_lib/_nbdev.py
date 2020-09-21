@@ -19,11 +19,14 @@ index = {"device": "03_auto_augment.ipynb",
          "get_activ_offsets_mns": "02_inference.ipynb",
          "fastai2pil_basis": "03_auto_augment.ipynb",
          "pil2fastai_basis": "03_auto_augment.ipynb",
+         "pil2tensor": "03_auto_augment.ipynb",
          "flip_horizontal": "03_auto_augment.ipynb",
          "swap_xy_coords": "03_auto_augment.ipynb",
          "rotate_bb": "03_auto_augment.ipynb",
          "shear_x_bboxes": "03_auto_augment.ipynb",
-         "rotate_bboxes": "03_auto_augment.ipynb"}
+         "rotate_bboxes": "03_auto_augment.ipynb",
+         "ImageNetPolicy": "03_auto_augment.ipynb",
+         "SubPolicy": "03_auto_augment.ipynb"}
 
 modules = ["vision_core.py",
            "anchor_boxes.py",
