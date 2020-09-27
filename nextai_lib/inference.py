@@ -3,15 +3,12 @@
 __all__ = ['device', 'pad_output', 'get_activ_offsets_mns']
 
 # Cell
-from fastai.vision.all import *
+#from fastai.vision.all import *
+from fastai import *
 from typing import *
 from torch import tensor, Tensor
 import torch
 import torchvision      # Needed to invoke torchvision.ops.mns function
-
-# Cell
-from vision_core import *
-#from anchor_boxes import *
 
 # Cell
 # Automatically sets for GPU or CPU environments
@@ -19,7 +16,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Cell
 # Pad tensors so that they have uniform dimentions: (batch size, no of items in a batch, 4) and  (batch size, no of items in a batch, 21)
-def pad_output(l_bb:List, l_scr:List, l_idx:List, no_classes:Int):
+def pad_output(l_bb:List, l_scr:List, l_idx:List, no_classes:int):
   '''Pad tensors so that they have uniform dimentions: (batch size, no of items in a batch, 4) and  (batch size, no of items in a batch, 21)
       Inputs: l_bb  - list  of tensors containing individual non-uniform sized bounding boxes
               l_scr - list  of tensors containing class index values (i.e. 1 - airplane)
@@ -59,7 +56,7 @@ def pad_output(l_bb:List, l_scr:List, l_idx:List, no_classes:Int):
   return (TensorBBox(torch.stack(l_b,0)), TensorMultiCategory(torch.stack(l_c,0)), TensorMultiCategory(torch.stack(l_cat,0)) )
 
 # Cell
-def get_activ_offsets_mns(anchrs:Tensor, activs:Tensor, no_classes:Int, threshold:Float=0.5):
+def get_activ_offsets_mns(anchrs:Tensor, activs:Tensor, no_classes:int, threshold:float=0.5):
   ''' Takes in activations and calculates corresponding anchor box offsets.
       It then filters the resulting boxes through MNS
       Inputs:

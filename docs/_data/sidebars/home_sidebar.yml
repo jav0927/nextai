@@ -18,6 +18,12 @@ entries:
     - output: web,pdf
       title: anchor_boxes
       url: anchor_boxes.html
+    - output: web,pdf
+      title: inference
+      url: inference.html
+    - output: web,pdf
+      title: auto_agument
+      url: auto_augment.html
     output: web
     title: nextai_lib
   output: web

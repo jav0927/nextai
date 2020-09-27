@@ -3,6 +3,8 @@
     "Overview": "/",
     "module name here": "core.html",
     "vision_core": "vision_core.html",
-    "anchor_boxes": "anchor_boxes.html"
+    "anchor_boxes": "anchor_boxes.html",
+    "inference": "inference.html",
+    "auto_agument": "auto_augment.html"
   }
 }

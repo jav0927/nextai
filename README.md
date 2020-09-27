@@ -6,19 +6,16 @@ This file will become your README and also the index of your documentation.
 
 ## Install
 
-`pip install your_project_name`
+`pip install nextai`
 
-## How to use
+## Introduction
+> This library contains classes and modules for use in developing neural networks for object recognition applications.
+> Functions automated in the library include:>> *   Google AutoAgment data augmentation methods
+*   NN models:SSD and RetinaNet*   Core methods to develop training and inference 
+*   Training algorithms
+*   Inference algorithms
 
-Fill me in please! Don't forget code examples:
+## How to Use
 
-```python
-1+1
-```
-
-
-
-
-    2
-
-
+>*   Install the nextai library in your environment
+*   from nextai import *
