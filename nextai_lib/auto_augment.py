@@ -90,31 +90,29 @@ def rotate_bb(bb:Tensor, rads:float):
 
 # Cell
 # SHEAR-HORIZONTALLY BOUNDING BOXES
-def shear_x_bboxes (bboxes:Tensor, factor:float, y_first=True):
+def shear_x_bboxes (bboxes:Tensor, factor:float):
   '''
     Shear horizontally a tensor of bounding boxes
     Input:
           bboxes  -      2-d tensor of bounding boxes associated with the image
           factor  -      Factor by which the image in sheared in the horizontal direction
-          y_first -      Input coordinates in the format y1x1y2x2
-          TODO: change this
     Output:
           bboxes -       Sheared bounding boxes
   '''
-  if not y_first: swap_xy_coords(bboxes)                                # swap yx sequence for xy sequence
-  m = bboxes[(bboxes == 0.).all(1)]                                     # Retain the all-zero rows
-  bboxes = bboxes[~(bboxes == 0.).all(1)]                               # Retain the non all-zero rows
+  p =len(bboxes.shape)-1
+  m = bboxes[(bboxes == 0.).all(p)]                                     # Retain the all-zero rows
+  bboxes = bboxes[~(bboxes == 0.).all(p)]                               # Retain the non all-zero rows
   mag = factor                                                          # If the factor is negative, flip the boxes about the (0,0) center
   if factor <= 0 : mag = -factor; bboxes = flip_horizontal(bboxes)      # so it can be sheared correctly (in the positive orientation)
-  bboxes = fastai2pil_basis(bboxes)                                     # Convert to PIL image basis (0,0) to (1,1)
-  bboxes[:,[1,3]] = bboxes[:,[1,3]] + bboxes[:,[0,2]]  * mag            # Shear in the horizontal direction (to the right)
+  bboxes = fastai2pil_basis(bboxes)                                     # Convert from Fastai basis to to PIL image basis (0,0) to (1,1)
+  bboxes[...,[0,2]] = bboxes[...,[0,2]] + bboxes[...,[1,3]]  * mag      # Shear in the horizontal direction (to the right)
+  #bboxes[...,0] = bboxes[...,0] - bboxes[...,1]*mag
+  #bboxes[...,2] = bboxes[...,2] - bboxes[...,3]*mag
   bboxes = pil2fastai_basis(bboxes)                                     # Convert to FASTAI image basis. Top-left (-1,-1) to Bottom-right (1,1)
   if factor <= 0 : bboxes = flip_horizontal(bboxes)                     # If factor is negative, restore the boxes to the original orientation
   bboxes = torch.clamp(bboxes, -1, 1)                                   # Clamp coordinates to [-1, 1]
-  bboxes = torch.cat([m, bboxes], dim=0)                                # Graft the all-zero rows back to the bounding box array
-  if not y_first: swap_xy_coords(bboxes)                                # restore xy sequence
-  return bboxes
 
+  return torch.cat([m, bboxes], dim=0)                                # Graft the all-zero rows back to the bounding box array
 
 # Cell
 # ROTATE BOUNDING BOXES
@@ -194,7 +192,10 @@ class ImageNetPolicy():
 
 
     def __call__(self, x, y):
-      '''Fetch a random sub-policy'''
+      '''Fetch a random sub-policy
+          Inputs: x - XXX, y - XXXX
+          Outputs: Selected policy
+      '''
       policy_idx = random.randint(0, len(self.policy) - 1)
       return self.policy[policy_idx](x, y)
 
