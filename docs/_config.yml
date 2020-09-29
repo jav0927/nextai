@@ -60,5 +60,5 @@ sidebars:
 - home_sidebar
 
 theme: jekyll-theme-cayman
-# baseurl: /nextai_lib/
-baseurl: /nextai/
+baseurl: /nextai_lib/
+
