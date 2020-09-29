@@ -14,73 +14,38 @@
   },
   "cells": [
     {
-      "cell_type": "code",
-      "metadata": {
-        "id": "Z6VNY59fKc-P",
-        "colab_type": "code",
-        "colab": {}
-      },
-      "source": [
-        "#hide\n",
-        "from nextai_lib import *"
-      ],
-      "execution_count": null,
-      "outputs": []
-    },
-    {
       "cell_type": "markdown",
       "metadata": {
-        "id": "_OXNRY0pKc-q",
-        "colab_type": "text"
+        "id": "Ly0SB0KVCoJU"
       },
       "source": [
         "# Nextai\n",
         "\n",
-        "> Object recognition research notebooks and investigations on other vision related areas."
+        ">Object recognition research notebooks and investigations on other vision related areas."
       ]
     },
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "hs_Mb_jtKc-t",
-        "colab_type": "text"
+        "id": "rzmI0BSWCoJX"
       },
       "source": [
-        "This file will become your README and also the index of your documentation."
+        "## Install\n",
+        "\n",
+        "(add installation here)"
       ]
     },
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "UnGtV52sKc-x",
-        "colab_type": "text"
-      },
-      "source": [
-        "## Install"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "3R5xSP8QKc-0",
-        "colab_type": "text"
-      },
-      "source": [
-        "`pip install nextai`"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "yVIUmiWbKc-4",
-        "colab_type": "text"
+        "id": "4mEGz63RCoJa"
       },
       "source": [
         "## Introduction\n",
-        "> This library contains classes and modules for use in developing neural networks for object recognition applications.\n",
-        "> Functions automated in the library include:\n",
-        ">\n",
-        ">*   Google AutoAgment data augmentation methods\n",
+        "This library contains classes and modules for use in developing neural networks for object recognition applications.\n",
+        "Functions automated in the library include:\n",
+        "\n",
+        "*   Google AutoAgment data augmentation methods\n",
         "*   NN models: SSD and RetinaNet\n",
         "*   Core methods to develop training and inference \n",
         "*   Training algorithms\n",
@@ -90,13 +55,12 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "abgV2BtpKc-7",
-        "colab_type": "text"
+        "id": "miiFL1T5CoJb"
       },
       "source": [
         "## How to Use\n",
         "\n",
-        ">*   Install the nextai library in your environment\n",
+        "*   Install the nextai library in your environment\n",
         "*   from nextai import *"
       ]
     }
