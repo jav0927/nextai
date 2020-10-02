@@ -35,7 +35,7 @@ def pil2fastai_basis(b):  return (b * 2.).float() - 1.    # b - Bounding box(s)
 # Helper Function
 def pil2tensor(image:Image,dtype:np.dtype)->Tensor:
     ''' Convert PIL style `image` array to torch style image tensor.
-        Imput -  image -image in PILImage form
+        Imput -  image -image in Image form
         output - image in FASTAI image format
         '''
     a = np.asarray(image)
@@ -227,12 +227,12 @@ class SubPolicy():
         }
 
         # Custom rotate with fill
-        def rotate_with_fill(img:PILImage, yb, mag):
+        def rotate_with_fill(img:Image, yb, mag):
             ob = rotate_bboxes(yb, mag, y_first=False)
             return [img.convert("RGBA").rotate(mag, resample=Image.BICUBIC, fillcolor=(128,128,128)).convert(img.mode), ob]    # Rotate the image
 
         # Shear horizontal
-        def shear_horizontal (img:PILImage, yb, mag):
+        def shear_horizontal (img:Image, yb, mag):
             trb = mag*random.choice([-1, 1])
             tri = (1, -trb, 0, 0, 1, 0)
             b_tf = img.transform(img.size, Image.AFFINE, tri, Image.BICUBIC,fillcolor=(128,128,128) )
