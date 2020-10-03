@@ -228,7 +228,7 @@ class SubPolicy():
 
         # Custom rotate with fill
         def rotate_with_fill(img:Image, yb, mag):
-            ob = rotate_bboxes(yb, mag, y_first=False)
+            ob = rotate_bboxes(yb, mag)
             return [img.convert("RGBA").rotate(mag, resample=Image.BICUBIC, fillcolor=(128,128,128)).convert(img.mode), ob]    # Rotate the image
 
         # Shear horizontal
@@ -236,7 +236,7 @@ class SubPolicy():
             trb = mag*random.choice([-1, 1])
             tri = (1, -trb, 0, 0, 1, 0)
             b_tf = img.transform(img.size, Image.AFFINE, tri, Image.BICUBIC,fillcolor=(128,128,128) )
-            ob = shear_x_bboxes (yb, trb, y_first=False)
+            ob = shear_x_bboxes (yb, trb)
             return [b_tf, ob]
 
         # Transform functions
