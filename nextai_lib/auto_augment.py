@@ -237,7 +237,7 @@ class SubPolicy():
             tri = (1, -trb, 0, 0, 1, 0)
             b_tf = img.transform(img.size, Image.AFFINE, tri, Image.BICUBIC,fillcolor=(128,128,128) )
             ob = shear_x_bboxes (yb, trb)
-            Print(F'type(b_tf) {type(b_tf)}, type(ob) {type(ob)} ')
+            print(F'type(b_tf) {type(b_tf)}, type(ob) {type(ob)} ')
             return [b_tf, ob]
 
         # Transform functions
