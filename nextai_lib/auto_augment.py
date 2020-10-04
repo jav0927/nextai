@@ -5,7 +5,7 @@ __all__ = ['device', 'fastai2pil_basis', 'pil2fastai_basis', 'pil2tensor', 'flip
 
 # Cell
 #from fastai.vision.all import *
-from fastai import *
+from fastai.vision.all import *
 import numpy as np
 
 from torch import tensor, Tensor
@@ -112,7 +112,7 @@ def shear_x_bboxes (bboxes:Tensor, factor:float):
   if factor <= 0 : bboxes = flip_horizontal(bboxes)                     # If factor is negative, restore the boxes to the original orientation
   bboxes = torch.clamp(bboxes, -1, 1)                                   # Clamp coordinates to [-1, 1]
 
-  return torch.cat([m, bboxes], dim=0)                                # Graft the all-zero rows back to the bounding box array
+  return TensorBBox(torch.cat([m, bboxes], dim=0))                                # Graft the all-zero rows back to the bounding box array
 
 # Cell
 # ROTATE BOUNDING BOXES
@@ -140,7 +140,7 @@ def rotate_bboxes(bboxes:Tensor, degrees:float):
   if degrees <= 0 : bboxes = flip_horizontal(bboxes)                    # If degrees is negative, restore the boxes to the original orientation
   bboxes = torch.clamp(bboxes, -1, 1)                                   # Clamp coordinates to [-1, 1]
 
-  return torch.cat([m, bboxes], dim=0)                         # Graft the all-zero rows back to the bounding box and return
+  return TensorBBox(torch.cat([m, bboxes], dim=0) )                       # Graft the all-zero rows back to the bounding box and return
 
 
 # Cell
@@ -237,6 +237,7 @@ class SubPolicy():
             tri = (1, -trb, 0, 0, 1, 0)
             b_tf = img.transform(img.size, Image.AFFINE, tri, Image.BICUBIC,fillcolor=(128,128,128) )
             ob = shear_x_bboxes (yb, trb)
+            Print(F'type(b_tf) {type(b_tf)}, type(ob) {type(ob)} ')
             return [b_tf, ob]
 
         # Transform functions
